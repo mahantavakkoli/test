@@ -1,27 +1,41 @@
-<ion-tabs>
-  <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="tab1" href="/tabs/tab1">
-      <ion-icon aria-hidden="true" name="triangle"></ion-icon>
-      <ion-label>Tab 1</ion-label>
-    </ion-tab-button>
+<ion-header [translucent]="true" mode="ios">
+  <ion-toolbar>
+    <ion-title class=""> Global Header</ion-title>
+  </ion-toolbar>
+</ion-header>
+<lib-ionic-tabs [tabs]="tabs"> </lib-ionic-tabs>
+<!-- <ion-tabs>
+</ion-tabs> -->
 
-    <ion-tab-button tab="tab2" href="/tabs/tab2">
-      <ion-icon aria-hidden="true" name="ellipse"></ion-icon>
-      <ion-label>Tab 2</ion-label>
-    </ion-tab-button>
+<!-- <table>
+  <tbody>
+    <tr>
+      <td>برند:</td>
+      <td>ایرانی</td>
+    </tr>
+    <tr>
+      <td>گرید:</td>
+      <td>خوراکی</td>
+    </tr>
+    <tr>
+      <td>وزن:</td>
+      <td>100 گرم، 500 گرم، 1000 گرم</td>
+    </tr>
+  </tbody>
+</table>
+<div class="custom-product-features">
+  <div>
+    <p>برند:</p>
+    <p>ایرانی</p>
+  </div>
+  <div>
+    <p>گرید:</p>
+    <p>خوراکی</p>
+  </div>
+  <div>
+    <p>وزن:</p>
+    <p>100 گرم، 500 گرم، 1000 گرم</p>
+  </div>
+</div> -->
 
-    <ion-tab-button tab="tab3" href="/tabs/tab3">
-      <ion-icon aria-hidden="true" name="square"></ion-icon>
-      <ion-label>Tab 3</ion-label>
-    </ion-tab-button>
-    <ion-tab-button tab="tab2" href="/tabs/tab2">
-      <ion-icon aria-hidden="true" name="ellipse"></ion-icon>
-      <ion-label>Tab 2</ion-label>
-    </ion-tab-button>
 
-    <ion-tab-button tab="tab3" href="/tabs/tab3">
-      <ion-icon aria-hidden="true" name="square"></ion-icon>
-      <ion-label>Tab 3</ion-label>
-    </ion-tab-button>
-  </ion-tab-bar>
-</ion-tabs>

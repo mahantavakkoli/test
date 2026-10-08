@@ -22,12 +22,17 @@
     "@capacitor/keyboard": "^8.0.0",
     "@capacitor/status-bar": "^8.0.0",
     "@ionic/angular": "^9.0.0",
+    "@primeuix/themes": "^2.0.0",
     "@tailwindcss/postcss": "^4.3.3",
     "express": "^4.21.2",
     "ionicons": "^8.0.0",
+    "jalaali-js": "^2.0.1",
     "postcss": "^8.5.26",
+    "primeicons": "^8.0.0",
+    "primeng": "^21.0.2",
     "rxjs": "~7.8.0",
     "tailwindcss": "^4.3.3",
+    "tailwindcss-primeui": "^0.6.1",
     "zone.js": "0.16.2"
   },
   "devDependencies": {

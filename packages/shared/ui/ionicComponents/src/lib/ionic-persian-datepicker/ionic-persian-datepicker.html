@@ -1,0 +1,43 @@
+<div class="flex">
+  <ion-picker>
+    <!-- Year column -->
+    <ion-picker-column [value]="selected().year" (ionChange)="onYearChange($event)">
+      @for (option of yearOptions; track option.value) {
+      <ion-picker-column-option [value]="option.value">{{ option.name }}</ion-picker-column-option>
+      }
+    </ion-picker-column>
+
+    <!-- Month column -->
+    <ion-picker-column [value]="selected().month" (ionChange)="onMonthChange($event)">
+      @for (option of monthOptions; track option.value) {
+      <ion-picker-column-option [value]="option.value">{{ option.name }}</ion-picker-column-option>
+      }
+    </ion-picker-column>
+
+    <!-- Day column -->
+    <ion-picker-column [value]="selected().day" (ionChange)="onDayChange($event)">
+      @for (option of dayOptions(); track option.value) {
+      <ion-picker-column-option [value]="option.value">{{ option.name }}</ion-picker-column-option>
+      }
+    </ion-picker-column>
+  </ion-picker>
+
+  @if (showTime()) {
+  <ion-picker>
+    <!-- Hour column -->
+    <ion-picker-column [value]="selectedTime().hour" (ionChange)="onHourChange($event)">
+      @for (option of hourOptions; track option.value) {
+      <ion-picker-column-option [value]="option.value">{{ option.name }}</ion-picker-column-option>
+      }
+    </ion-picker-column>
+
+    <!-- Minute column -->
+    <ion-picker-column [value]="selectedTime().minute" (ionChange)="onMinuteChange($event)">
+      <div slot="prefix">:</div>
+      @for (option of minuteOptions; track option.value) {
+      <ion-picker-column-option [value]="option.value">{{ option.name }}</ion-picker-column-option>
+      }
+    </ion-picker-column>
+  </ion-picker>
+  }
+</div>

@@ -1,0 +1,12 @@
+ion-tab-bar {
+  margin: 10px;
+  --background: #ececec;
+  border-radius: 14px;
+  @supports (corner-shape: squircle) {
+    border-radius: 50px;
+    corner-shape: squircle;
+  }
+}
+ion-tab-button:part(navigate) {
+  background-color: transparent !important;
+}

@@ -71,6 +71,9 @@
         "development": {
           "buildTarget": "business-app:build:development"
         }
+      },
+      "options": {
+        "port": 4202
       }
     },
     "lint": {
@@ -81,7 +84,7 @@
       "executor": "@nx/web:file-server",
       "options": {
         "buildTarget": "business-app:build",
-        "port": 4200,
+        "port": 4202,
         "staticFilePath": "dist/apps/business-app/browser",
         "spa": true
       }

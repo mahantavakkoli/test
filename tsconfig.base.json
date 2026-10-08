@@ -17,7 +17,8 @@
       "@org/types": ["./packages/shared/types/src/index.ts"],
       "@org/models": ["./packages/shared/models/src/index.ts"],
       "@org/auth": ["./packages/shared/services/auth/src/index.ts"],
-      "@org/data": ["./packages/shared/services/data/src/index.ts"]
+      "@org/data": ["./packages/shared/services/data/src/index.ts"],
+      "@org/ionicComponents": ["./packages/shared/ui/ionicComponents/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

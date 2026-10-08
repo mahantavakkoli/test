@@ -1,0 +1,7 @@
+<ion-picker>
+  <ion-picker-column [value]="value()" (ionChange)="selectionChanged($event)">
+    @for (option of options(); track $index) {
+    <ion-picker-column-option [value]="option.value" [disabled]="option.disabled">{{option.name}}</ion-picker-column-option>
+    }
+  </ion-picker-column>
+</ion-picker>

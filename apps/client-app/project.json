@@ -71,6 +71,9 @@
         "development": {
           "buildTarget": "client-app:build:development"
         }
+      },
+      "options": {
+        "port": 4200
       }
     },
     "lint": {
@@ -86,5 +89,9 @@
         "spa": true
       }
     }
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "tailwindcss": "^4.3.3"
   }
 }

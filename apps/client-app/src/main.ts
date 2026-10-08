@@ -1,22 +1,34 @@
-import { bootstrapApplication } from '@angular/platform-browser';
 import {
-  RouteReuseStrategy,
   provideRouter,
   withPreloading,
   PreloadAllModules,
+  RouteReuseStrategy,
+  withComponentInputBinding,
 } from '@angular/router';
-import {
-  IonicRouteStrategy,
-  provideIonicAngular,
-} from '@ionic/angular';
-
+import { addIcons } from 'ionicons';
 import { routes } from './app/app.routes';
 import { AppComponent } from './app/app.component';
+import { provideHttpClient } from '@angular/common/http';
+import { home, settings, person, search } from 'ionicons/icons';
+import { bootstrapApplication } from '@angular/platform-browser';
+import { IonicRouteStrategy, provideIonicAngular } from '@ionic/angular';
+
+addIcons({
+  home,
+  person,
+  search,
+  settings,
+});
 
 bootstrapApplication(AppComponent, {
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    provideIonicAngular(),
-    provideRouter(routes, withPreloading(PreloadAllModules)),
+    provideIonicAngular({
+      useSetInputAPI: true,
+      hardwareBackButton: true,
+      swipeBackEnabled: false,
+    }),
+    provideRouter(routes, withPreloading(PreloadAllModules), withComponentInputBinding()),
+    provideHttpClient(),
   ],
 });

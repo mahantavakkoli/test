@@ -1,15 +1,21 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title> Tab 1 </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" class="">
+  <div class="p-4">
+    <ion-button expand="block" (click)="openModal()">Open</ion-button>
+    <!-- <lib-ionic-persian-datepicker [value]="form.date().value()" [showTime]="true" (valueChange)="form.date().value.set($event)"></lib-ionic-persian-datepicker> -->
+    <!-- <div>{{authService.data() | json}}</div> -->
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <div>{{authService.data() | json}}</div>
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+    <!-- <ion-datetime locale="fa-IR"></ion-datetime> -->
+    <lib-ionic-picker [options]="options()" [value]="form.option().value()" (valueChange)="form.option().value.set($event)"></lib-ionic-picker>
+    <ion-toggle [formField]="form.active">Default Toggle</ion-toggle>
+    <div>{{formModel() | json}}</div>
+
+    @for (item of [].constructor(50); track $index) {
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta minus quibusdam reprehenderit, tempore obcaecati quidem neque ex praesentium rem reiciendis magnam tenetur
+      alias eaque ducimus doloremque nihil eius dolore et.
+    </p>
+    <br />
+    }
+  </div>
 </ion-content>

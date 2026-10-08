@@ -1,0 +1,11 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>تاریخ {{ showTime() ? 'و زمان' : '' }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<lib-ionic-persian-datepicker [value]="value()" [showTime]="showTime()" (valueChange)="value.set($event)" />
+<ion-footer>
+  <ion-toolbar>
+    <ion-button expand="block" (click)="confirm()">تایید</ion-button>
+  </ion-toolbar>
+</ion-footer>

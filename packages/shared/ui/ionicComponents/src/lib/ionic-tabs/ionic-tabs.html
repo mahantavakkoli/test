@@ -1,0 +1,10 @@
+<ion-tabs>
+  <ion-tab-bar slot="bottom" class="py-2">
+    @for (tab of tabs(); track $index) {
+    <ion-tab-button [tab]="tab.tabName" [href]="tab.href" class="flex flex-col gap-4">
+      <ion-icon aria-hidden="true" [name]="tab.icon"></ion-icon>
+      <ion-label class="mt-1.5">{{tab.label}}</ion-label>
+    </ion-tab-button>
+    }
+  </ion-tab-bar>
+</ion-tabs>

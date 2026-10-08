@@ -1,0 +1,20 @@
+{
+  "files.associations": {
+    "*.css": "tailwindcss",
+    "*.scss": "tailwindcss"
+  },
+  "tailwindCSS.includeLanguages": {
+    "html": "html",
+    "javascript": "javascript",
+    "css": "css"
+  },
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "tailwindCSS.experimental.configFile": {
+    "apps/admin/src/assets/tailwind.css": "apps/admin/**",
+    "apps/client-app/src/styles.scss": "apps/client-app/**",
+    "apps/business-app/src/styles.css": "apps/business-app/**",
+    "packages/shared/ui/**/src/styles.css": "packages/shared/ui/**"
+  }
+}
